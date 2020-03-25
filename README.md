@@ -30,6 +30,28 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+pseudocode - user story
+
+1. user opens webpage
+2. current date is displayed at top of calendar
+3. user scrolls down and sees
+    A. timeblocks for standard business hours 9AM - 5PM
+        a. 9 blocks
+    B. timeblocks are color coded:
+        a. Past = color1
+        b. Present = color2
+        c. Future = color3
+    C. timeblock on click:
+        a. able to enter text
+            1. create entry field
+        b. able to save text
+            1. create save button
+            2. saved in local storage
+            3. upon page refresh, saved events persist
+
+
+
+```
 The following animation demonstrates the application functionality:
 
 ![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)

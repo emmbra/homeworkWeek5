@@ -18,7 +18,14 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
     <title>Work Day Scheduler</title>
   </head>
 
@@ -27,13 +34,165 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+
+    <!-- CSS kebab case -->
+    <!-- js camelcase
+    snakecase
+    sentencecase -->
+    <!-- google fonts/font awesome/boostrap icons for icons -->
+
+    <div class="container-fluid" id="calendar">
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>9AM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>10AM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>11AM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>12PM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>1PM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>2PM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>3PM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>4PM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container timeBlock">
+        <div class="row">
+          <div class="col-1 column-time">
+            <span>5PM</span>
+          </div>
+          <div class="col-10 column-color">
+            <input class="note-field" />
+          </div>
+          <div class="col-1 column-save">
+            <button class="save-btn">
+              <span class="save-icon fa fa-save"></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="./assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
