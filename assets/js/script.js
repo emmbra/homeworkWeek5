@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 // User Story - pseudocode
 // 1. user opens webpage
 // 2. retrieve date from local storage or blank something ""
@@ -20,18 +22,43 @@
 
 // declare global variables
 
-var $calendar = $("#calendar");
-
 var $currentDay = moment().format('LL');
 $("#currentDay").text($currentDay);
 
-var $currentTime = moment().format('hh:mm a');
+var $currentTime = moment().format('h:mm a');
 $("#currentTime").text($currentTime);
-
 // set interval to have the time update -- see class content
+
+var $currentHour = moment().format('h');
+
+// Get information from local storage
+
+// Save information to local storage
+$(".save-btn").on("click", function(event) {
+    event.preventDefault();
+    console.log(this);
+    var time = $(this).parent.attr("id");
+    var value = $(this).siblings(".user-notes").val();
+    
+}
+
+// Function to set the row color based on current time
+
+function rowColor () {
+    if(parseInt($(.hour)) > parseInt(moment().format('h'))){
+        row.addClass("future");
+    } else if(parseInt($(.hour)) < parseInt(moment().format('h'))){
+        row.addClass("past");
+    } else {
+        row.addClass("present");
+    }
+}
+rowColor();
 
 // create listener for save button
 // target note-field div to capture user input
 // traverse DOM from button to input, use this as starting point
 
 // .closest() - pass in selector - finds closest parent
+
+});
