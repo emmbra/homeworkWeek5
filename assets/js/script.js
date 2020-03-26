@@ -32,14 +32,14 @@ $(document).ready(function() {
   // done by adding and removing past/present/future classes
   // based on comparison to current hour
   function rowColor() {
-    var currentHour = moment().hour();
-    var calendarHour = parseInt($(this).attr("value"));
     $(".hour-block").each(function() {
+      var currentHour = moment().hour();
+      var calendarHour = parseInt($(this).attr("value"));
       if (currentHour === calendarHour) {
         $(this).addClass("present");
       } else if (currentHour > calendarHour) {
         $(this).addClass("past");
-      } else if (currentHour < calendarHour){
+      } else if (currentHour < calendarHour) {
         $(this).addClass("future");
       }
     });
