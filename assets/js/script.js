@@ -1,60 +1,50 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  // sets current date
+  var $currentDay = moment().format("LL");
+  $("#currentDay").text($currentDay);
 
-// sets current date
-var $currentDay = moment().format('LL');
-$("#currentDay").text($currentDay);
+  // sets current time
+  var $currentTime = moment().format("h:mm a");
+  $("#currentTime").text($currentTime);
+  // To do: set interval to have the time update dynamically
+  // see class content
 
-// sets current time
-var $currentTime = moment().format('h:mm a');
-$("#currentTime").text($currentTime);
-// To do: set interval to have the time update dynamically 
-// see class content
+  // Get saved information from local storage
+  // localStorage.getItem
 
-
-
-// Get saved information from local storage
-// localStorage.getItem
-
-
-
-
-
-// Event listener for save button
-// Saves information to local storage
-// targets user-notes class to capture user input
-// traverses DOM from saveBtn to input
-$(".saveBtn").on("click", function(event) {
+  // Event listener for save button
+  // Saves information to local storage
+  // targets user-notes class to capture user input
+  // traverses DOM from saveBtn to input
+  $(".saveBtn").on("click", function(event) {
     event.preventDefault();
     console.log(this);
-    var time = $(this).parent().attr("id");
-    var value = $(this).siblings(".user-notes").val();
+    var time = $(this)
+      .parent()
+      .attr("id");
+    var value = $(this)
+      .siblings(".user-notes")
+      .val();
     localStorage.setItem(time, value);
-});
+  });
 
-
-
-// Function to set the row color based on current time
-// done by adding and removing past/present/future classes
-// based on comparison to current hour
-// function rowColor() {
-//     var currentHour = moment().hours()
-//     //target every hour-block
-//     $(".hour-block").each(function() {
-//     if currentHour < calendarHour, add class future
-//     if (){
-//         $(this).addClass("future")
-//     }
-//     if currentHour > calendarHour, add class past
-//     else if () {
-//         $(this).addClass("past")
-//     }
-//     if currentHour === calendarHour, add class present
-//     else () {
-//         $(this).addClass("present");
-//     }
-// })
-// };
-// rowColor();
+  // Function to set the row color based on current time
+  // done by adding and removing past/present/future classes
+  // based on comparison to current hour
+  function rowColor() {
+    var currentHour = moment().hour();
+    var calendarHour = parseInt($(this).attr("value"));
+    $(".hour-block").each(function() {
+      if (currentHour === calendarHour) {
+        $(this).addClass("present");
+      } else if (currentHour > calendarHour) {
+        $(this).addClass("past");
+      } else if (currentHour < calendarHour){
+        $(this).addClass("future");
+      }
+    });
+  }
+  rowColor();
 });
 
 // User Story - pseudocode
@@ -75,4 +65,3 @@ $(".saveBtn").on("click", function(event) {
 //             1. create save button
 //             2. saved in local storage
 //             3. upon page refresh, saved events persist
-
