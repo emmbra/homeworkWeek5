@@ -1,5 +1,71 @@
 $(document).ready(function(){
 
+// sets current date
+var $currentDay = moment().format('LL');
+$("#currentDay").text($currentDay);
+
+// sets current time
+var $currentTime = moment().format('h:mm a');
+$("#currentTime").text($currentTime);
+// To do: set interval to have the time update dynamically 
+// see class content
+
+
+
+// Get saved information from local storage
+// localStorage.getItem
+
+
+
+
+
+// Event listener for save button
+// Saves information to local storage
+// targets user-notes class to capture user input
+// traverses DOM from saveBtn to input
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    console.log(this);
+    var time = $(this).parent().attr("id");
+    var value = $(this).siblings(".user-notes").val();
+    localStorage.setItem(time, value);
+});
+
+
+
+// Function to set the row color based on current time
+// done by adding and removing past/present/future classes
+// based on comparison to current hour
+// function rowColor() {
+//     var currentHour = moment().hours()
+
+//     //target every time-block
+//     $(".time-block").
+
+
+//     //if currentHour < calendarHour, add class future
+//     if (){
+//         $(this).addClass("future")
+//     }
+
+//     //if currentHour > calendarHour, add class past
+//     else if () {
+//         $(this).addClass("past")
+//     }
+
+//     //if currentHour === calendarHour, add class present
+//     else () {
+//         $(this).addClass("present");
+//     }
+// }
+
+
+
+
+
+
+});
+
 // User Story - pseudocode
 // 1. user opens webpage
 // 2. retrieve date from local storage or blank something ""
@@ -19,46 +85,3 @@ $(document).ready(function(){
 //             2. saved in local storage
 //             3. upon page refresh, saved events persist
 
-
-// declare global variables
-
-var $currentDay = moment().format('LL');
-$("#currentDay").text($currentDay);
-
-var $currentTime = moment().format('h:mm a');
-$("#currentTime").text($currentTime);
-// set interval to have the time update -- see class content
-
-var $currentHour = moment().format('h');
-
-// Get information from local storage
-
-// Save information to local storage
-$(".save-btn").on("click", function(event) {
-    event.preventDefault();
-    console.log(this);
-    var time = $(this).parent.attr("id");
-    var value = $(this).siblings(".user-notes").val();
-    
-}
-
-// Function to set the row color based on current time
-
-function rowColor () {
-    if(parseInt($(.hour)) > parseInt(moment().format('h'))){
-        row.addClass("future");
-    } else if(parseInt($(.hour)) < parseInt(moment().format('h'))){
-        row.addClass("past");
-    } else {
-        row.addClass("present");
-    }
-}
-rowColor();
-
-// create listener for save button
-// target note-field div to capture user input
-// traverse DOM from button to input, use this as starting point
-
-// .closest() - pass in selector - finds closest parent
-
-});
