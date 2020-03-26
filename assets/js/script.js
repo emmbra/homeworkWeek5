@@ -38,32 +38,23 @@ $(".saveBtn").on("click", function(event) {
 // based on comparison to current hour
 // function rowColor() {
 //     var currentHour = moment().hours()
-
-//     //target every time-block
-//     $(".time-block").
-
-
-//     //if currentHour < calendarHour, add class future
+//     //target every hour-block
+//     $(".hour-block").each(function() {
+//     if currentHour < calendarHour, add class future
 //     if (){
 //         $(this).addClass("future")
 //     }
-
-//     //if currentHour > calendarHour, add class past
+//     if currentHour > calendarHour, add class past
 //     else if () {
 //         $(this).addClass("past")
 //     }
-
-//     //if currentHour === calendarHour, add class present
+//     if currentHour === calendarHour, add class present
 //     else () {
 //         $(this).addClass("present");
 //     }
-// }
-
-
-
-
-
-
+// })
+// };
+// rowColor();
 });
 
 // User Story - pseudocode
