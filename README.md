@@ -45,4 +45,4 @@ Thank you to Berkeley Coding Bootcamp, my instructor Emmanual Jucaban, and my TA
 
 ## License
 
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit)
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit).
