@@ -1,68 +1,48 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Day Planner
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+[Day Planner](https://emmbra.github.io/homeworkWeek5/index.html)
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+## Description
+Created a Day Planner Calendar app with the following features:
 
-## User Story
+* Current day & time displayed upon opening app.
+* Timeblocks for each business hour between 9AM - 5PM.
+* Timeblocks are color coded to represent whether they are in the past(grey), present(red), or future (green) based on the current time.
+* Timeblocks each have a text area where events can be written.
+* Timeblocks each have a save button that saves information to local storage.
+* Upon page refresh, all saved information persists and is displayed in the correct timeblock.
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+## Technologies
 
-## Acceptance Criteria
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap CDN
+* jQuery CDN
+* moment.js CDN
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+## Challenges
 
-pseudocode - user story
+In total this project took about 8 hours to build including all the time put into research and trial & error.
 
-1. user opens webpage
-2. current date is displayed at top of calendar
-3. user scrolls down and sees
-    A. timeblocks for standard business hours 9AM - 5PM
-        a. 9 blocks
-    B. timeblocks are color coded:
-        a. Past = color1
-        b. Present = color2
-        c. Future = color3
-    C. timeblock on click:
-        a. able to enter text
-            1. create entry field
-        b. able to save text
-            1. create save button
-            2. saved in local storage
-            3. upon page refresh, saved events persist
+Difficulties included:
 
+* Saving and retrieving information from local storage.
+* Becoming accustomed to jQuery syntax after using vanilla JavaScript for a few weeks.
+* Using $(this).
 
+## Screenshots
+### Start Page
 
-```
-The following animation demonstrates the application functionality:
+![Screenshot of Start Page](https://github.com/emmbra/homeworkWeek5/blob/master/assets/images/01-screenshot-start.png)
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+### Local Storage
+![Screenshot of Local Storage](https://github.com/emmbra/homeworkWeek5/blob/master/assets/images/02-screenshot-localstorage.png)
 
-## Review
+## Credits
 
-You are required to submit the following for review:
+Thank you to Berkeley Coding Bootcamp, my instructor Emmanual Jucaban, and my TAs Musa Akbari and Sergio Di Martino for answering all my questions and helping me along the way.
 
-* The URL of the deployed application.
+## License
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+This project is licensed under the MIT License: [MIT](https://choosealicense.com/licenses/mit)

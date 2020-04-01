@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   // sets current date
   var $currentDay = moment().format("LL");
   $("#currentDay").text($currentDay);
@@ -7,17 +6,15 @@ $(document).ready(function() {
   // sets current time
   var $currentTime = moment().format("h:mm a");
   $("#currentTime").text($currentTime);
-  // To do: set interval to have the time update dynamically
-  // see class content
 
   // Get saved information from local storage
-  
-  function getInfo () {
-    for(var i = 9; i < 18; i++) {
+  function getInfo() {
+    for (var i = 9; i < 18; i++) {
       var storedInfo = localStorage.getItem(`hour-${i}`);
-      $(`#hour-${i}`).children(".user-notes").text(storedInfo);
+      $(`#hour-${i}`)
+        .children(".user-notes")
+        .text(storedInfo);
     }
-    
   }
 
   getInfo();
@@ -25,7 +22,6 @@ $(document).ready(function() {
   // Event listener for save button
   // Saves information to local storage
   // targets user-notes class to capture user input
-  // traverses DOM from saveBtn to input
   $(".saveBtn").on("click", function(event) {
     event.preventDefault();
     var time = $(this)
@@ -43,7 +39,11 @@ $(document).ready(function() {
   function rowColor() {
     $(".user-notes").each(function() {
       var currentHour = moment().hour();
-      var calendarHour = parseInt($(this).parent().attr("value"));
+      var calendarHour = parseInt(
+        $(this)
+          .parent()
+          .attr("value")
+      );
       if (currentHour === calendarHour) {
         $(this).addClass("present");
       } else if (currentHour > calendarHour) {
@@ -55,5 +55,3 @@ $(document).ready(function() {
   }
   rowColor();
 });
-
-
